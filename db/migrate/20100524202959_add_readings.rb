@@ -4,7 +4,7 @@ class AddReadings < ActiveRecord::Migration
     create_table :readings do |t|
       t.references  :utility
       t.float       :value
-      t.datetime    :measured_at
+      t.date        :measured_at
       t.timestamps
     end
     add_index :readings, :measured_at

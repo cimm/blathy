@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(:version => 20100524202959) do
   create_table "readings", :force => true do |t|
     t.integer  "utility_id"
     t.float    "value"
-    t.datetime "measured_at"
+    t.date     "measured_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

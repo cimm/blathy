@@ -1,1 +1,11 @@
 %h1 Blathy
+
+= form_for @reading, :url => readings_path, :remote => true do |f|
+  %p
+    = f.label :value
+    = f.text_field :value
+  %p
+    = f.label :measured_at
+    = f.date_select :measured_at
+  %p
+    = submit_tag 'Submit'

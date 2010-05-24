@@ -1,5 +1,6 @@
 Blathy::Application.routes.draw do
 
-  root :to => 'home#index'
+  resource  :readings, :only => [:create]
+  root      :to => 'home#index'
 
 end

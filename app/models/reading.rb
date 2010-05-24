@@ -4,5 +4,6 @@ class Reading < ActiveRecord::Base
 
   validates :value,       :presence => true
   validates :measured_at, :presence => true
+  validates :utility_id,  :presence => true
 
 end
