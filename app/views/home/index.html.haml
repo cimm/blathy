@@ -1,11 +1,52 @@
 %h1 Blathy
 
-= form_for @reading, :url => readings_path, :remote => true do |f|
-  %p
-    = f.label :value
-    = f.text_field :value
-  %p
-    = f.label :measured_at
-    = f.date_select :measured_at
-  %p
-    = submit_tag 'Submit'
+-# Water screen
+%div#water
+  %div.toolbar
+    %h1 Water
+    %a.back{:href => '#'} Home
+-# Gas screen
+= form_for @reading, :url => readings_path, :remote => true, :html => {:id => 'gas', :class => 'form'} do |f|
+  %div.toolbar
+    %h1 Gas
+    %a.back{:href => '#'} Home
+  %ul.rounded
+    %li
+      = f.label :value
+      = f.text_field :value
+    %li
+      = f.label :measured_at
+      = f.date_select :measured_at
+  = hidden_field :reading, :utility_id, :value => 1
+  %a.submit.grayButton{:style => 'margin-left:.5em; margin-right:.5em'} Save
+-# Electricity screen
+%div#electricity
+  %div.toolbar
+    %h1 Electricity
+    %a.back{:href => '#'} Home
+  %ul.rounded
+    %li.arrow
+      %a{:href => '#grid'}
+        %img{:src => '/images/grid.png', :alt => ''}
+        Grid
+    %li.arrow
+      %a{:href => '#solar'}
+        %img{:src => '/images/solar.png', :alt => ''}
+        Solar
+-# Home screen
+%div#home.current
+  %div.toolbar
+    %h1 Blathy
+  %ul.rounded
+    %li.arrow
+      %a{:href => '#water'}
+        %img{:src => '/images/water.png', :alt => ''}
+        Water
+    %li.arrow
+      %a{:href => '#gas'}
+        %img{:src => '/images/gas.png', :alt => ''}
+        Gas
+    %li.arrow
+      %a{:href => '#electricity'}
+        %img{:src => '/images/electricity.png', :alt => ''}
+        Electricity
