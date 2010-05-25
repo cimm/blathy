@@ -10,7 +10,7 @@
 %div#electricity
   %div.toolbar
     %h1 Electricity
-    %a.back{:href => '#'} Home
+    %a.back{:href => '#back'} Back
   %ul.rounded
     %li.arrow
       %a{:href => '#grid'}
@@ -20,6 +20,30 @@
       %a{:href => '#solar'}
         %img{:src => '/images/solar.png', :alt => ''}
         Solar
+
+-# Electricity > Grid screen
+%div#grid
+  %div.toolbar
+    %h1 Grid
+    %a.back{:href => '#back'} Back
+  %ul.rounded
+    %li.arrow
+      %a{:href => '#grid_day'}
+        %img{:src => '/images/day.png', :alt => ''}
+        Day
+    %li.arrow
+      %a{:href => '#grid_night'}
+        %img{:src => '/images/night.png', :alt => ''}
+        Night
+
+-# Electricity > Solar screen
+= render "form", :utility => "solar"
+
+-# Electricity > Grid > Grid Day screen
+= render "form", :utility => "grid_day"
+
+-# Electricity > Grid > Grid Day screen
+= render "form", :utility => "grid_night"
 
 -# Home screen
 %div#home.current

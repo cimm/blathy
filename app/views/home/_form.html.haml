@@ -1,7 +1,7 @@
 = form_for @reading, :url => readings_path, :remote => true, :html => {:id => utility, :class => 'form'} do |f|
   %div.toolbar
-    %h1= utility.capitalize
-    %a.back{:href => '#'} Home
+    %h1= utility.humanize
+    %a.back{:href => '#back'} Back
   %ul.rounded
     %li
       = f.label :value
@@ -9,5 +9,5 @@
     %li
       = f.label :measured_at
       = f.date_select :measured_at
-  = hidden_field :reading, :utility, :value => utility
-  %a.submit.grayButton.smallButton Save
+  = hidden_field :reading, :utility, :value => utility.humanize
+  %a.submit.grayButton Save
