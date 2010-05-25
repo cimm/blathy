@@ -15,7 +15,11 @@ class HomeController < ApplicationController
     last_readings.each{|reading| last_sum += reading.value}
     current_sum = 0
     current_readings.each{|reading| current_sum += reading.value}
-    (((current_sum / last_sum)*100)-100).round(2)
+    if last_sum == 0
+      return 0
+    else
+      return (((current_sum / last_sum)*100)-100).round(2)
+    end
   end
 
 end

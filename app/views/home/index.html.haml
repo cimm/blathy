@@ -52,11 +52,11 @@
   %div.panel.stats
     %div.lastReading
       %p Last reading
-      %p.value= @last_reading.measured_at.strftime('%B')
+      %p.value= @last_reading ? @last_reading.measured_at.strftime('%B') : "-"
     %div.score
       %p Score
       %p.value
-        %span.good= "#{@score}%" if @score < 0
+        %span.good= "#{@score}%" if @score <= 0
         %span.bad= "+#{@score}%" if @score > 0
   %ul.rounded{:style => 'clear:both'}
     %li.arrow
