@@ -1,24 +1,11 @@
 %h1 Bláthy
 
 -# Water screen
-%div#water
-  %div.toolbar
-    %h1 Water
-    %a.back{:href => '#'} Home
+= render "form", :utility => "water"
+
 -# Gas screen
-= form_for @reading, :url => readings_path, :remote => true, :html => {:id => 'gas', :class => 'form'} do |f|
-  %div.toolbar
-    %h1 Gas
-    %a.back{:href => '#'} Home
-  %ul.rounded
-    %li
-      = f.label :value
-      = f.text_field :value
-    %li
-      = f.label :measured_at
-      = f.date_select :measured_at
-  = hidden_field :reading, :utility_id, :value => 1
-  %a.submit.grayButton.smallButton Save
+= render "form", :utility => "gas"
+
 -# Electricity screen
 %div#electricity
   %div.toolbar
@@ -33,6 +20,7 @@
       %a{:href => '#solar'}
         %img{:src => '/images/solar.png', :alt => ''}
         Solar
+
 -# Home screen
 %div#home.current
   %div.toolbar
