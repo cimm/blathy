@@ -1,4 +1,42 @@
-a.smallButton {
+.smallButton {
   margin-left: 0.5em;
   margin-right: 0.5em;
+}
+
+.stats {
+  text-shadow: 1px -1px #282A2C;
+  color: #666;
+  margin: 0.7em;
+  font-weight: bolder;
+}
+
+.stats div {
+  float: left;
+  padding: .5em;
+  font-size: smaller;
+  text-transform: uppercase;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.lastReading {
+  width: 47%;
+  border-right: 2px solid #323232;
+}
+
+.score {
+  width: 44%;
+  text-align: right;
+}
+
+.value {
+  font-size: 150%;
+}
+
+.good {
+  color: #99CB1E;
+}
+
+.bad {
+  color: #E14E3E;
 }

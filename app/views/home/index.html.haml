@@ -49,7 +49,16 @@
 %div#home.current
   %div.toolbar
     %h1 Bláthy
-  %ul.rounded
+  %div.panel.stats
+    %div.lastReading
+      %p Last reading
+      %p.value= @last_reading.measured_at.strftime('%B')
+    %div.score
+      %p Score
+      %p.value
+        %span.good= "#{@score}%" if @score < 0
+        %span.bad= "+#{@score}%" if @score > 0
+  %ul.rounded{:style => 'clear:both'}
     %li.arrow
       %a{:href => '#water'}
         %img{:src => '/images/water.png', :alt => ''}
