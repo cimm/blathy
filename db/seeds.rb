@@ -1,5 +1,5 @@
-Utility.new(:name => "Water").save!
-Utility.new(:name => "Gas").save!
-Utility.new(:name => "Grid day").save!
-Utility.new(:name => "Grid night").save!
-Utility.new(:name => "Solar").save!
+Utility.new(:name => "Water", :icon => "water.png").save!
+Utility.new(:name => "Gas", :icon => "gas.png").save!
+Utility.new(:name => "Electricity day", :icon => "day.png").save!
+Utility.new(:name => "Electricity night", :icon => "night.png").save!
+Utility.new(:name => "Solar", :icon => "solar.png").save!

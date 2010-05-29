@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20100524202959) do
 
   create_table "utilities", :force => true do |t|
     t.string   "name"
+    t.string   "icon"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
