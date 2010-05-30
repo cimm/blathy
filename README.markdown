@@ -1,6 +1,6 @@
 # Bláthy
 
-A personal iPhone web application to monitor my energy usage. This application should help me to write down the current energy meters in the house at the beginning of each month: water, electricity, solar power and gas.
+A personal iPhone web application to monitor my energy usage. This application should help me to write down the current energy meters in the house at the beginning of each month: water, electricity, solar power and gas. One see some [screenshots](http://emberapp.com/explore/tags/blathy)?
 
 I'll focus on input for now but this will be only useful when I have some reporting over time.
 
