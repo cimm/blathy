@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   def index
     @utilities = Utility.all
     @reading = Reading.new
+
     @last_reading = Reading.last
     @score = score #"+10%"
   end

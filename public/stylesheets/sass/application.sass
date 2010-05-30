@@ -44,6 +44,13 @@ a.back
 input
   font-size: large
   border-color= !darkbeige
+  height: 1.6em
+  padding: 0.2em
+  color= !darkbrown
+select
+  margin-left: 1em
+select:first-child
+  margin-left: 0
 a.submit
   text-shadow: 1px -1px black
   color: white
@@ -66,18 +73,21 @@ ul.rounded
   -webkit-border-radius= !radius
   background-color: white
   li
+    padding: 1em
+    border-bottom-color= !darkbeige
+    border-bottom-width: 1px
+    border-bottom-style: solid
     span.label
       position: relative
       top: -4px
       margin-left: 0.5em
     a
+      margin: -1em
       padding: 1em
-      border-bottom-color= !darkbeige
-      border-bottom-width: 1px
-      border-bottom-style: solid
       display: block
     a.active
-      background-color= !darkbeige
+      background-color: rgba(222, 220, 201, 0.5)
+      color= !xlightbrown
   li.arrow
     background-image: url(/images/chevron.png)
     background-repeat: no-repeat
@@ -86,4 +96,4 @@ ul.rounded
     border-bottom-width: 0
   li.warning
     background-image: url(/images/chevron.png), url(/images/warning.png)
-    background-position: 98% 50%, 91% 50%
+    background-position: 97% 50%, 90% 50%

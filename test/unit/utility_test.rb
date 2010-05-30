@@ -36,4 +36,6 @@ class UtilityTest < ActiveSupport::TestCase
     assert utility.save
   end
 
+  # TODO Test the up_to_date? method
+
 end

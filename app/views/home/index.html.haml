@@ -1,12 +1,18 @@
+-# Readings input forms
 - @utilities.each do |utility|
-  = render "form", :utility => utility
+  = render "form", :utility => utility if !utility.up_to_date?
 -# Home screen
 %div#home.current
   %div.toolbar
     %h1 Blathy
   %ul.rounded
     - @utilities.each do |utility|
-      %li.arrow
-        %a{ :href => "##{utility.name.parameterize}" }
+      - if utility.up_to_date?
+        %li
           = image_tag(utility.icon, :height => 19, :width => 14, :alt => "") if utility.icon
           %span.label= utility.name
+      - else
+        %li.arrow.warning
+          %a{ :href => "##{utility.name.parameterize}" }
+            = image_tag(utility.icon, :height => 19, :width => 14, :alt => "") if utility.icon
+            %span.label= utility.name

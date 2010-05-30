@@ -33,7 +33,16 @@ a.back {
 
 input {
   font-size: large;
-  border-color: #dedcc9; }
+  border-color: #dedcc9;
+  height: 1.6em;
+  padding: 0.2em;
+  color: #403831; }
+
+select {
+  margin-left: 1em; }
+
+select:first-child {
+  margin-left: 0; }
 
 a.submit {
   text-shadow: 1px -1px black;
@@ -57,18 +66,22 @@ ul.rounded {
   border-style: solid;
   -webkit-border-radius: 5px;
   background-color: white; }
-  ul.rounded li span.label {
-    position: relative;
-    top: -4px;
-    margin-left: 0.5em; }
-  ul.rounded li a {
+  ul.rounded li {
     padding: 1em;
     border-bottom-color: #dedcc9;
     border-bottom-width: 1px;
-    border-bottom-style: solid;
-    display: block; }
-  ul.rounded li a.active {
-    background-color: #dedcc9; }
+    border-bottom-style: solid; }
+    ul.rounded li span.label {
+      position: relative;
+      top: -4px;
+      margin-left: 0.5em; }
+    ul.rounded li a {
+      margin: -1em;
+      padding: 1em;
+      display: block; }
+    ul.rounded li a.active {
+      background-color: rgba(222, 220, 201, 0.5);
+      color: #a69f97; }
   ul.rounded li.arrow {
     background-image: url(/images/chevron.png);
     background-repeat: no-repeat;
@@ -77,4 +90,4 @@ ul.rounded {
     border-bottom-width: 0; }
   ul.rounded li.warning {
     background-image: url(/images/chevron.png), url(/images/warning.png);
-    background-position: 98% 50%, 91% 50%; }
+    background-position: 97% 50%, 90% 50%; }
