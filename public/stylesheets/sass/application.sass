@@ -1,6 +1,6 @@
 !beige = #f2f1ea
 !darkbeige = #dedcc9
-!xlightbrown = #a69f97
+!lightbrown = #a69f97
 !darkbrown = #403831
 !xdarkbrown = #261f1b
 
@@ -87,7 +87,7 @@ ul.rounded
       display: block
     a.active
       background-color: rgba(222, 220, 201, 0.5)
-      color= !xlightbrown
+      color= !lightbrown
   li.arrow
     background-image: url(/images/chevron.png)
     background-repeat: no-repeat
@@ -97,3 +97,16 @@ ul.rounded
   li.warning
     background-image: url(/images/chevron.png), url(/images/warning.png)
     background-position: 97% 50%, 90% 50%
+div.panel
+  text-align: right
+  margin: 1em
+  margin-right: 1.5em
+  color= !darkbeige
+  font-weight: bolder
+  .value
+    font-size: x-large
+    color= !lightbrown
+  .month
+    font-size: smaller
+  img
+    float: left

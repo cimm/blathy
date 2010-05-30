@@ -2,9 +2,14 @@
   %div.toolbar
     %h1 Blathy
     %a.back{ :href => "#back" } Back
-  %div.panel
-    Last value
-    = @last_value
+  - if utility.readings.last
+    %div.panel
+      = image_tag("#{utility.icon}-big.png")
+      %h2 LAST READING
+      %p.value= utility.readings.last.value
+      %p.month
+        = pluralize(Time.now.month - utility.readings.last.measured_at.month, "month")
+        ago
   %ul.rounded
     %li
       = f.text_field :value, { :placeholder => "#{utility.name} value", :size => 24 } # TODO: Value is not sent when the type is set to tel (:type  => :tel)

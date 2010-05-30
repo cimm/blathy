@@ -32,7 +32,7 @@ class UtilityTest < ActiveSupport::TestCase
   end
 
   test "can optionally specify an icon for a given utility" do
-    utility = Utility.new(:name => "Gas", :icon => "gas.png")
+    utility = Utility.new(:name => "Gas", :icon => "gas")
     assert utility.save
   end
 

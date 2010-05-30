@@ -91,3 +91,17 @@ ul.rounded {
   ul.rounded li.warning {
     background-image: url(/images/chevron.png), url(/images/warning.png);
     background-position: 97% 50%, 90% 50%; }
+
+div.panel {
+  text-align: right;
+  margin: 1em;
+  margin-right: 1.5em;
+  color: #dedcc9;
+  font-weight: bolder; }
+  div.panel .value {
+    font-size: x-large;
+    color: #a69f97; }
+  div.panel .month {
+    font-size: smaller; }
+  div.panel img {
+    float: left; }
