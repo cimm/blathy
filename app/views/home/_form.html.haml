@@ -17,4 +17,6 @@
         = f.date_select :measured_at, :start_year => Time.now.year - 2, :end_year => Time.now.year
     = hidden_field :reading, :utility_id, :value => utility.id
     %a.submit Save
-  %a.panel.back.result{ :href => "#back" } Reading added
+  %a.panel.back.result{ :href => "#back" }
+    %p= image_tag("gauge.png", :alt => "")
+    %p READING ADDED
