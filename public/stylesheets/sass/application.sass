@@ -3,6 +3,8 @@
 !lightbrown = #a69f97
 !darkbrown = #403831
 !xdarkbrown = #261f1b
+!lightgreen = #eeffbb
+!darkgreen = #9ac81d
 
 !radius = 5px
 
@@ -92,7 +94,7 @@ ul.rounded
     background-image: url(/images/chevron.png)
     background-repeat: no-repeat
     background-position: 97% 50%
-  li:last-child a
+  li:last-child
     border-bottom-width: 0
   li.warning
     background-image: url(/images/chevron.png), url(/images/warning.png)
@@ -110,3 +112,19 @@ div.panel
     font-size: smaller
   img
     float: left
+a.result
+  top: 50px
+  width: 260px
+  background-image: none
+  display: none
+  margin: 1em
+  text-align: center
+  padding: 0.5em
+  padding-top: 10em
+  border-width: 1px
+  border-style: solid
+  border-color= !darkgreen
+  background-color= !lightgreen
+  color= !darkgreen
+  -webkit-border-radius= !radius
+  height: 13em

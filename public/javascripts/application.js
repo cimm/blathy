@@ -9,6 +9,12 @@ $.jQTouch({
     '/images/solar.png',
     '/images/gas.png',
     '/images/water.png',
+    '/images/electricity-big.png',
+    '/images/electricity-day-big.png',
+    '/images/electricity-night-big.png',
+    '/images/solar-big.png',
+    '/images/gas-big.png',
+    '/images/water-big.png',
     '/images/chevron.png',
     '/images/warning.png'
   ]

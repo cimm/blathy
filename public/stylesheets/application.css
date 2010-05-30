@@ -86,7 +86,7 @@ ul.rounded {
     background-image: url(/images/chevron.png);
     background-repeat: no-repeat;
     background-position: 97% 50%; }
-  ul.rounded li:last-child a {
+  ul.rounded li:last-child {
     border-bottom-width: 0; }
   ul.rounded li.warning {
     background-image: url(/images/chevron.png), url(/images/warning.png);
@@ -105,3 +105,20 @@ div.panel {
     font-size: smaller; }
   div.panel img {
     float: left; }
+
+a.result {
+  top: 50px;
+  width: 260px;
+  background-image: none;
+  display: none;
+  margin: 1em;
+  text-align: center;
+  padding: 0.5em;
+  padding-top: 10em;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #9ac81d;
+  background-color: #eeffbb;
+  color: #9ac81d;
+  -webkit-border-radius: 5px;
+  height: 13em; }

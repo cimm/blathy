@@ -1,6 +1,6 @@
-<!-- FIXME: This doesn't seem right -->
-<% if @reading.id %>
-  <p>Added, thanks!</p>
-<% else %>
-  <p>Not added, error!</p>
-<% end %>
+$('#<%= @reading.utility.name.parameterize %>').find('form').remove();
+$('#<%= @reading.utility.name.parameterize %>').find('.result').css('display', 'block');
+$('#<%= @reading.utility.name.parameterize %>').find('form').remove();
+$("a[href='#<%= @reading.utility.name.parameterize %>']").parent().removeClass('arrow').removeClass('warning');
+var child_content = $("a[href='#<%= @reading.utility.name.parameterize %>']").contents();
+$("a[href='#<%= @reading.utility.name.parameterize %>']").replaceWith(child_content);
