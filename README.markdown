@@ -8,6 +8,17 @@ I'll focus on input for now but this will be only useful when I have some report
 
 The application is named after [Ottó Titusz Bláthy](http://en.wikipedia.org/wiki/Otto_Blathy), the Hungarian co-inventor of the watt meter.
 
+## Setup
+
+Bláthy is designed to run on Heroku. There are a few parameters it needs to be happy.
+
+  heroku config:add USER_MAIL=me@example.com
+
+Don't forget to activate the following Heroku addons:
+
+  cron:daily
+  sendgrid:free
+
 ## Ideas to implement
 
 - A crontab that sends an e-mail at the beginning of each month.
