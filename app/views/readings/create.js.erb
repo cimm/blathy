@@ -1,3 +1,6 @@
-{
-  "id": <%= @reading.id %>
-}
+<!-- FIXME: This doesn't seem right -->
+<% if @reading.id %>
+  <p>Added, thanks!</p>
+<% else %>
+  <p>Not added, error!</p>
+<% end %>

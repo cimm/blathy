@@ -13,7 +13,7 @@ class ReadingTest < ActiveSupport::TestCase
     assert existing_reading.save
     assert existing_reading.destroy
   end
-  
+
   test "should not create a reading without a value, measured date and linked utility" do
     reading = Reading.new
     assert !reading.save
@@ -25,7 +25,7 @@ class ReadingTest < ActiveSupport::TestCase
     reading = Reading.new(:measured_at => "2010-03-05", :utility_id => utility.id)
     assert !reading.save
   end
-  
+
    test "should not create a reading without a measured date even it has a value and linked utility" do
     utility = Utility.new(:name => "Gas")
     assert utility.save

@@ -1,0 +1,88 @@
+!beige = #f2f1ea
+!darkbeige = #dedcc9
+!xlightbrown = #a69f97
+!darkbrown = #403831
+!xdarkbrown = #261f1b
+
+!radius = 5px
+
+!default_font = Arial, sans-serif
+!header_font = Lobster, Arial, sans-serif
+
+=gradient
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #403831), color-stop(0.8, #261f1b))
+
+html
+  background-color= !beige
+  font-family= !default_font
+  font-weight: bolder
+h1
+  background-image: url(/images/header-bg.png)
+  color: white
+  line-height: 45px
+  text-align: center
+  height: 45px
+  font-family= !header_font
+  -webkit-font-smoothing: antialiased
+  text-shadow: 1px -1px black
+  font-size: 1.5em
+a
+  text-decoration: none
+  color= !darkbrown
+a.pageslide-close
+  position: absolute
+  font-family= !default_font
+  font-size: .6em
+  color= !beige
+  left: 5px
+  padding-left: 15px
+  padding-right: 7px
+  background-image: url(/images/back-right.png), url(/images/back-left.png)
+  background-repeat: no-repeat
+  background-position:  100% 50%, 0 50%
+input
+  font-size: large
+  border-color= !darkbeige
+a.submit
+  text-shadow: 1px -1px black
+  color: white
+  border-width: 0
+  -webkit-border-radius= !radius
+  margin: 0 1em 0 1em
+  padding: 0.5em 0 0.5em 0
+  width: 275px
+  display: block
+  text-align: center
+  padding: 0.5em
+  -webkit-user-select: none
+  +gradient
+ul.rounded
+  margin: 1em
+  list-style: none
+  border-color= !darkbeige
+  border-width: 1px
+  border-style: solid
+  -webkit-border-radius= !radius
+  background-color: white
+  li
+    span.label
+      position: relative
+      top: -4px
+      margin-left: 0.5em
+    a
+      padding: 1em
+      border-bottom-color= !darkbeige
+      border-bottom-width: 1px
+      border-bottom-style: solid
+      display: block
+    a.active
+      background-color= !darkbeige
+  li.arrow
+    background-image: url(/images/chevron.png)
+    background-repeat: no-repeat
+    background-position: 97% 50%
+  li:last-child a
+    border-bottom-width: 0
+  li.warning
+    background-image: url(/images/chevron.png), url(/images/warning.png)
+    background-position: 98% 50%, 91% 50%

@@ -11,24 +11,29 @@ class UtilityTest < ActiveSupport::TestCase
     assert existing_utility.save
     assert existing_utility.destroy
   end
-  
+
   test "should not create two utilities with the same name" do
     first_utility = Utility.new(:name => "Gas")
     assert first_utility.save
     second_utility = Utility.new(:name => "Gas")
     assert !second_utility.save
   end
-  
+
   test "should not create a utility without name" do
     utility = Utility.new
     assert !utility.save
   end
-  
-   test "should not create a two utilities with the same name" do
+
+  test "should not create a two utilities with the same name" do
     first_utility = Utility.new(:name => "Gas")
     assert first_utility.save
     second_utility = Utility.new(:name => "Gas")
     assert !second_utility.save
-  end 
+  end
+
+  test "can optionally specify an icon for a given utility" do
+    utility = Utility.new(:name => "Gas", :icon => "gas.png")
+    assert utility.save
+  end
 
 end

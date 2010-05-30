@@ -1,13 +1,12 @@
-= form_for @reading, :url => readings_path, :remote => true, :html => {:id => utility, :class => 'form'} do |f|
+= form_for @reading, :remote => true, :html => { :id => utility.name.parameterize } do |f|
+  = f.error_messages
   %div.toolbar
-    %h1= utility.humanize
-    %a.back{:href => '#back'} Back
+    %h1 Blathy
+    %a.back{ :href => "#back" } Back
   %ul.rounded
     %li
-      = f.label :value
-      = f.text_field :value
+      = f.text_field :value, { :placeholder => "#{utility.name} value", :size => 10 } # TODO: Value is not sent when the type is set to tel (:type  => :tel)
     %li
-      = f.label :measured_at
       = f.date_select :measured_at
-  = hidden_field :reading, :utility, :value => utility.humanize
-  %a.submit.grayButton Save
+  = hidden_field :reading, :utility_id, :value => utility.id
+  %a.submit Save

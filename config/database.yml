@@ -3,3 +3,8 @@ development:
   database: blathy_d
   pool: 5
   timeout: 5000
+test:
+  adapter: mysql
+  database: blathy_t
+  pool: 5
+  timeout: 5000

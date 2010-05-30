@@ -1,73 +1,12 @@
-%h1 Bláthy
-
--# Water screen
-= render "form", :utility => "water"
-
--# Gas screen
-= render "form", :utility => "gas"
-
--# Electricity screen
-%div#electricity
-  %div.toolbar
-    %h1 Electricity
-    %a.back{:href => '#back'} Back
-  %ul.rounded
-    %li.arrow
-      %a{:href => '#grid'}
-        %img{:src => '/images/grid.png', :alt => ''}
-        Grid
-    %li.arrow
-      %a{:href => '#solar'}
-        %img{:src => '/images/solar.png', :alt => ''}
-        Solar
-
--# Electricity > Grid screen
-%div#grid
-  %div.toolbar
-    %h1 Grid
-    %a.back{:href => '#back'} Back
-  %ul.rounded
-    %li.arrow
-      %a{:href => '#grid_day'}
-        %img{:src => '/images/day.png', :alt => ''}
-        Day
-    %li.arrow
-      %a{:href => '#grid_night'}
-        %img{:src => '/images/night.png', :alt => ''}
-        Night
-
--# Electricity > Solar screen
-= render "form", :utility => "solar"
-
--# Electricity > Grid > Grid Day screen
-= render "form", :utility => "grid_day"
-
--# Electricity > Grid > Grid Day screen
-= render "form", :utility => "grid_night"
-
+- @utilities.each do |utility|
+  = render "form", :utility => utility
 -# Home screen
 %div#home.current
   %div.toolbar
-    %h1 Bláthy
-  %div.panel.stats
-    %div.lastReading
-      %p Last reading
-      %p.value= @last_reading ? @last_reading.measured_at.strftime('%B') : "-"
-    %div.score
-      %p Score
-      %p.value
-        %span.good= "#{@score}%" if @score <= 0
-        %span.bad= "+#{@score}%" if @score > 0
-  %ul.rounded{:style => 'clear:both'}
-    %li.arrow
-      %a{:href => '#water'}
-        %img{:src => '/images/water.png', :alt => ''}
-        Water
-    %li.arrow
-      %a{:href => '#gas'}
-        %img{:src => '/images/gas.png', :alt => ''}
-        Gas
-    %li.arrow
-      %a{:href => '#electricity'}
-        %img{:src => '/images/electricity.png', :alt => ''}
-        Electricity
+    %h1 Blathy
+  %ul.rounded
+    - @utilities.each do |utility|
+      %li.arrow
+        %a{ :href => "##{utility.name.parameterize}" }
+          = image_tag(utility.icon, :height => 19, :width => 14, :alt => "") if utility.icon
+          %span.label= utility.name
