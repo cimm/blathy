@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'delorean'
 
 class UtilityTest < ActiveSupport::TestCase
 
@@ -36,6 +37,30 @@ class UtilityTest < ActiveSupport::TestCase
     assert utility.save
   end
 
-  # TODO Test the up_to_date? method
+  test "last reading was taken in the current month so it should be up-to-date" do
+    Delorean.time_travel_to("2010-03-05") do
+      utility = Utility.new(:name => "Gas")
+      assert utility.save
+      reading = Reading.new(:value => 3290.0, :measured_at => "2010-03-05", :utility_id => utility.id)
+      assert reading.save
+      assert utility.up_to_date?
+    end
+  end
+
+  test "last reading is taken last month so it should not be up-to-date" do
+    Delorean.time_travel_to("2010-03-05") do
+      utility = Utility.new(:name => "Gas")
+      assert utility.save
+      reading = Reading.new(:value => 3290.0, :measured_at => "2010-02-05", :utility_id => utility.id)
+      assert reading.save
+      assert !utility.up_to_date?
+    end
+  end
+
+  test "checking if up-to-date without a single reading shouldn't fail" do
+    utility = Utility.new(:name => "Gas")
+    assert utility.save
+    assert utility.up_to_date?.nil?
+  end
 
 end
