@@ -62,5 +62,7 @@ class UtilityTest < ActiveSupport::TestCase
     assert utility.save
     assert utility.up_to_date?.nil?
   end
+  
+  # TODO Test for case sensitive utilities
 
 end

@@ -3,7 +3,7 @@ require 'test_helper'
 class ReadingTest < ActiveSupport::TestCase
 
   test "create, read, update and destroy a reading" do
-    utility = Utility.new(:name => "Gas")
+    utility = Utility.new(:name => "Petrol")
     assert utility.save
     new_reading = Reading.new(:value => 3290.0, :measured_at => "2010-03-05", :utility_id => utility.id)
     assert new_reading.save!
@@ -20,14 +20,14 @@ class ReadingTest < ActiveSupport::TestCase
   end
 
   test "should not create a reading without a value even it has a measured date and linked utility" do
-    utility = Utility.new(:name => "Gas")
+    utility = Utility.new(:name => "Petrol")
     assert utility.save
     reading = Reading.new(:measured_at => "2010-03-05", :utility_id => utility.id)
     assert !reading.save
   end
 
    test "should not create a reading without a measured date even it has a value and linked utility" do
-    utility = Utility.new(:name => "Gas")
+    utility = Utility.new(:name => "Petrol")
     assert utility.save
     reading = Reading.new(:value => 3290.0, :utility_id => utility.id)
     assert !reading.save
