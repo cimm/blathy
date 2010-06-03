@@ -63,6 +63,11 @@ class UtilityTest < ActiveSupport::TestCase
     assert utility.up_to_date?.nil?
   end
   
-  # TODO Test for case sensitive utilities
-
+  test "should no create multiple utilites with the same name with different capitalizations" do
+    first_utility = Utility.new(:name => "Petrol")
+    assert first_utility.save
+    second_utility = Utility.new(:name => "PETROL")
+    assert !second_utility.save
+  end
+  
 end
