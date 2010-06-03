@@ -18,5 +18,13 @@ class HomeControllerTest < ActionController::TestCase
     assert_tag :tag => 'span', :attributes => {:class => 'label'}, :content => "Electricity night"
     assert_tag :tag => 'span', :attributes => {:class => 'label'}, :content => "Solar"
   end
+  
+  test "there should be at no solar readings for May so the homepage should have a warning icon" do
+    Delorean.time_travel_to("2010-05-20") do
+      get :index
+      assert_template 'index'
+      assert_tag :tag => 'li', :attributes => {:class => 'arrow warning'}, :content => "Solar"
+    end
+  end
 
 end
