@@ -1,4 +1,5 @@
 Feature: Utilities
+  In order to track my energy usage over time
   As a visitor
   I want to see all the utilities
 
