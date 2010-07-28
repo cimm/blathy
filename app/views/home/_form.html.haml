@@ -10,6 +10,9 @@
         %p.month
           = pluralize(Time.now.month - utility.readings.last.measured_at.month, "month")
           ago
+        %div.graph{ :id => "#{utility.name.parameterize}-graph" }
+        - content_for :extra_javascripts do
+          = javascript_include_tag graph_path(utility.id)
     %ul.rounded
       %li
         = f.text_field :value, { :placeholder => "#{utility.name} value", :size => 24 } # TODO: Value is not sent when the type is set to tel (:type  => :tel)

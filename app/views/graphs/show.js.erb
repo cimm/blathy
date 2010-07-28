@@ -1,0 +1,7 @@
+$(function () {
+   var width = 100;
+   var height = 50;
+   var r = Raphael("<%= @utility.name.parameterize %>-graph", width, height);
+   var y = <%= @data.inspect %>;
+   r.g.barchart(0, -14, width, height*1.65, y).attr({fill: "#dedcc9"});
+});
