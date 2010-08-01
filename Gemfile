@@ -1,4 +1,4 @@
-source 'http://rubygems.org'
+source :rubygems
 
 gem 'rails', '3.0.0.beta4'
 
@@ -7,6 +7,7 @@ gem 'haml'
 
 group :test do
   gem 'delorean'
+  gem 'culerity'
   gem 'capybara'
   gem 'cucumber'
   gem 'cucumber-rails'
