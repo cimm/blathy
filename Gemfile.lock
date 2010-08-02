@@ -49,6 +49,7 @@ GEM
     cucumber-rails (0.3.2)
       cucumber (>= 0.8.0)
     culerity (0.2.10)
+    database_cleaner (0.5.2)
     delorean (0.2.0)
       chronic
     diff-lcs (1.1.2)
@@ -128,6 +129,7 @@ DEPENDENCIES
   cucumber
   cucumber-rails
   culerity
+  database_cleaner
   delorean
   haml
   mysql
