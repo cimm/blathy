@@ -2,7 +2,7 @@ source :rubygems
 
 gem 'rails'
 
-gem 'mysql'
+gem 'mysql2'
 gem 'haml'
 
 group :test do
