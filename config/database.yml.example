@@ -1,0 +1,5 @@
+development:
+  adapter: mysql
+  database: blathy_d
+  user: root
+  password:
