@@ -8,6 +8,7 @@ Feature: Readings
   Given the default utilities are present
   And I am on the homepage
   And I follow "Water"
+  # TODO Next line doesn't work as it doesn't seem to find the anchor
   Then I should be on the new water reading page
   And I fill in "reading_value" with "490.45"
   And I press "Save"

@@ -1,6 +1,6 @@
 source :rubygems
 
-gem 'rails', '3.0.0.rc'
+gem 'rails'
 
 gem 'mysql'
 gem 'haml'
