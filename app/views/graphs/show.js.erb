@@ -1,7 +1,10 @@
-$(function () {
-   var width = 100;
-   var height = 50;
-   var r = Raphael("<%= @utility.name.parameterize %>-graph", width, height);
-   var y = <%= @data.inspect %>;
-   r.g.barchart(0, -14, width, height*1.65, y).attr({fill: "#dedcc9"});
+$(document).ready(function(e){
+  var linkName = "#<%= @utility.name.parameterize %>"
+  var graphName = linkName + "-graph";
+  var barWidth = 15;
+  var graphHeight = "30px";
+  $(linkName).bind('pageAnimationEnd', function(event, info){
+    var data = <%= @data.inspect %>;
+    $(graphName).sparkline(data, {type: 'bar', barColor: '#dedcc9', barWidth: barWidth, height: graphHeight});
+  })
 });

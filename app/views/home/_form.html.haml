@@ -10,7 +10,7 @@
         %p.month
           = pluralize(Time.now.month - utility.readings.last.measured_at.month, "month")
           ago
-        %div.graph{ :id => "#{utility.name.parameterize}-graph" }
+        %span.graph{ :id => "#{utility.name.parameterize}-graph" }
         - content_for :extra_javascripts do
           = javascript_include_tag graph_path(utility.id)
     %ul.rounded
