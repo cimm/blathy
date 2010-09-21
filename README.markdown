@@ -1,6 +1,6 @@
 # Bláthy
 
-A personal iPhone web application to monitor my energy usage. This application should help me to write down the current energy meters in the house at the beginning of each month: water, electricity, solar power and gas. One see some [screenshots](http://emberapp.com/explore/tags/blathy)?
+A personal iPhone web application to monitor my energy usage. This application should help me to write down the current energy meters in the house at the beginning of each month: water, electricity, solar power and gas. Looking for some [screenshots](http://emberapp.com/explore/tags/blathy)?
 
 I'll focus on input for now but this will be only useful when I have some reporting over time.
 
@@ -12,12 +12,13 @@ The application is named after [Ottó Titusz Bláthy](http://en.wikipedia.org/wi
 
 Bláthy is designed to run on Heroku. There are a few parameters it needs to be happy.
 
-  heroku config:add USER_MAIL=me@example.com
+    heroku config:add USER_MAIL=me@example.com
 
-Don't forget to activate the following Heroku addons:
+Don't forget to activate the following free Heroku addons:
 
-  cron:daily
-  sendgrid:free
+  - Nightly Cron
+  - Sendgrid Free
+  - Single Bundle (optional)
 
 ## Ideas to implement
 
