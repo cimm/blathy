@@ -1,4 +1,5 @@
 class ReadingsController < ApplicationController
+
   respond_to :js
 
   def create

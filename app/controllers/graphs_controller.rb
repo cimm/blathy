@@ -1,4 +1,5 @@
 class GraphsController < ApplicationController
+
   respond_to :js
 
   def show

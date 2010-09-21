@@ -1,11 +1,10 @@
 source :rubygems
 
 gem 'rails'
-
-gem 'mysql2'
 gem 'haml'
 
 group :development do
+  gem 'mysql2'
   gem 'heroku'
 end
 
