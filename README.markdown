@@ -13,6 +13,7 @@ The application is named after [Ottó Titusz Bláthy](http://en.wikipedia.org/wi
 Bláthy is designed to run on Heroku. There are a few parameters it needs to be happy.
 
     heroku config:add USER_MAIL=me@example.com
+    heroku config:add SECRET_TOKEN=some_random_string
 
 Don't forget to activate the following free Heroku addons:
 

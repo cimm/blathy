@@ -1,2 +1,2 @@
 # TODO Shouldn't be here...
-Rails.application.config.secret_token = 'a8b8736242c747e3f5d821df3133ba2a125e569535519761659f350c5e57f6590f08089b85bcd50925fd36d75dbdbd4a62f981238ad122215b5628da7d5125ee'
+Rails.application.config.secret_token = ENV['SECRET_TOKEN']
