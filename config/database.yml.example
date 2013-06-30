@@ -1,11 +1,11 @@
 development:
-  adapter: mysql2
+  adapter: postgresql
   database: blathy_d
   user: root
   password:
 
 test:
-  adapter: mysql2
+  adapter: postgresql
   database: blathy_t
   user: root
   password:

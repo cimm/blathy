@@ -2,14 +2,14 @@ source 'https://rubygems.org'
 
 ruby '1.9.3'
 
-gem 'rails',                       '~> 3.0.20'
-gem 'rack',                        '~> 1.2.5'
-gem 'activerecord-mysql2-adapter', '~> 0.0.3'
-gem 'haml',                        '~> 3.1.7'
+gem 'rails', '~> 3.0.20'
+gem 'pg',    '~> 0.15.1'
+gem 'rack',  '~> 1.2.5'
+gem 'haml',  '~> 3.1.7'
+gem 'sass',  '~> 3.2.9'
 
 group :development do
-  gem 'mysql2', '~> 0.3.11'
-  gem 'heroku', '~> 2.34.0'
+  gem 'heroku', '~> 2.39.4'
 end
 
 group :test do
