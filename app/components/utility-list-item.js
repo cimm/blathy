@@ -17,5 +17,4 @@ var UtilityListItem = React.createClass({
   }
 });
 
-
 module.exports = UtilityListItem;
