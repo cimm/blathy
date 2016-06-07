@@ -27,7 +27,7 @@ var ReadingNew = React.createClass({
   render: function() {
     return (
       <div>
-        <h1>Utility: {this.props.params.id}</h1>
+        <h1>{this.props.params.id}</h1>
         <ReadingList readings={this.state.readings}/>
         <ReadingForm/>
       </div>
