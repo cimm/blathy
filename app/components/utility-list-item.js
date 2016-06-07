@@ -11,7 +11,7 @@ var UtilityListItem = React.createClass({
   render: function() {
     return (
       <div>
-        <Link to={`/utilities/${this.props.name}`}>{this.props.name}</Link>
+        <Link to={`/utilities/${this.props.name}/readings/new`}>{this.props.name}</Link>
       </div>
     )
   }

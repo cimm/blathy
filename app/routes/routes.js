@@ -4,12 +4,12 @@ var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var browserHistory = ReactRouter.browserHistory;
 var Main = require('../components/main');
-var Utility = require('../components/utility');
+var ReadingNew = require('../components/reading-new');
 
 var routes = (
   <Router history={browserHistory}>
     <Route path='/' component={Main}/>
-    <Route path='/utilities/:id' component={Utility}/>
+    <Route path='/utilities/:id/readings/new' component={ReadingNew}/>
   </Router>
 );
 

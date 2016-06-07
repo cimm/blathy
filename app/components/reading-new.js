@@ -5,7 +5,7 @@ var ReadingForm = require('./reading-form.js');
 
 const DATASET = 'readings';
 
-var Utility = React.createClass({
+var ReadingNew = React.createClass({
   getInitialState: function() {
     return {
       readings: []
@@ -35,4 +35,4 @@ var Utility = React.createClass({
   }
 });
 
-module.exports = Utility;
+module.exports = ReadingNew;
