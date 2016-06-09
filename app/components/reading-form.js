@@ -4,9 +4,15 @@ var Store = require('../store.js');
 const DATASET = 'readings';
 
 var ReadingForm = React.createClass({
+  propTypes: {
+    utilityId: React.PropTypes.string
+  },
+
   getInitialState: function() {
     return {
-      currentReading: {}
+      currentReading: {
+        utilityId: this.props.utilityId
+      }
     };
   },
 

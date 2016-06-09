@@ -20,7 +20,10 @@ var ReadingNew = React.createClass({
   load: function() {
     this.store.load()
       .then(res => {
-        this.setState({readings: res.data});
+        var utilityReadings = res.data.filter(reading => {
+          return reading.utilityId == this.props.params.id;
+        });
+        this.setState({readings: utilityReadings});
       });
   },
 
@@ -29,7 +32,7 @@ var ReadingNew = React.createClass({
       <div>
         <h1>{this.props.params.id}</h1>
         <ReadingList readings={this.state.readings}/>
-        <ReadingForm/>
+        <ReadingForm utilityId={this.props.params.id} />
       </div>
     )
   }
