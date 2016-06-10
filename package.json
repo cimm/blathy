@@ -12,7 +12,8 @@
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-router": "^2.4.1",
-    "kinto": "^1.2.2"
+    "kinto": "^1.2.2",
+    "victory": "^0.8.0"
   },
   "devDependencies": {
     "babel-core": "^6.7.6",
