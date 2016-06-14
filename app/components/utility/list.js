@@ -1,6 +1,6 @@
 var React = require('react');
-var Store = require('../store.js');
-var UtilityListItem = require('../components/utility-list-item');
+var Store = require('../../store.js');
+var UtilityListItem = require('../../components/utility/list-item');
 
 const DATASET = 'utilities';
 

@@ -4,8 +4,8 @@ var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var browserHistory = ReactRouter.browserHistory;
 var Main = require('../components/main');
-var ReadingNew = require('../components/reading-new');
-var UtilityNew = require('../components/utility-new');
+var ReadingNew = require('../components/reading/new');
+var UtilityNew = require('../components/utility/new');
 
 var routes = (
   <Router history={browserHistory}>

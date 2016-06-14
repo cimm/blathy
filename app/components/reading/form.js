@@ -1,5 +1,5 @@
 var React = require('react');
-var Store = require('../store.js');
+var Store = require('../../store.js');
 
 const DATASET = 'readings';
 

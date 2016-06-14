@@ -1,11 +1,11 @@
 var React = require('react');
-var Store = require('../store.js');
+var Store = require('../../store.js');
 var Victory = require('victory');
 var VictoryChart = Victory.VictoryChart;
 var VictoryLine = Victory.VictoryLine;
 var VictoryScatter = Victory.VictoryScatter;
-var ReadingList = require('./reading-list.js');
-var ReadingForm = require('./reading-form.js');
+var ReadingList = require('./list.js');
+var ReadingForm = require('./form.js');
 
 const DATASET = 'readings';
 
