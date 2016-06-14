@@ -22,13 +22,9 @@ var ReadingNew = React.createClass({
   },
 
   load: function() {
-    this.store.load()
+    this.store.list({filters: {utilityId: this.props.params.id}, order: 'readAt'})
       .then(res => {
-        var utilityReadings = res.data.filter(reading => {
-          return reading.utilityId == this.props.params.id;
-        });
-        utilityReadings.sort((a, b) => a.readAt > b.readAt)
-        this.setState({readings: utilityReadings});
+        this.setState({readings: res.data});
       });
   },
 

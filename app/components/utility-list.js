@@ -17,7 +17,7 @@ var UtilityList = React.createClass({
   },
 
   load: function() {
-    this.store.load()
+    this.store.list({order: 'name'})
       .then(res => {
         this.setState({utilities: res.data});
       });

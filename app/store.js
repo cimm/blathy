@@ -20,8 +20,8 @@ class Store {
     }
   }
 
-  load() {
-    return this.collection.list();
+  list(params) {
+    return this.collection.list(params);
   }
 
   update(record) {
