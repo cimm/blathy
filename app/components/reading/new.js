@@ -7,8 +7,6 @@ var VictoryScatter = Victory.VictoryScatter;
 var ReadingList = require('./list.js');
 var ReadingForm = require('./form.js');
 
-const DATASET = 'readings';
-
 var ReadingNew = React.createClass({
   getInitialState: function() {
     return {
@@ -17,12 +15,19 @@ var ReadingNew = React.createClass({
   },
 
   componentDidMount: function() {
-    this.store = new Store(DATASET);
-    this.load();
+    this.loadUtility();
+    this.loadReadings();
   },
 
-  load: function() {
-    this.store.list({filters: {utilityId: this.props.params.id}, order: 'readAt'})
+  loadUtility: function() {
+    new Store('utilities').get(this.props.params.id)
+      .then(res => {
+        this.setState({utility: res.data});
+      });
+  },
+
+  loadReadings: function() {
+    new Store('readings').list({filters: {utilityId: this.props.params.id}, order: 'readAt'})
       .then(res => {
         this.setState({readings: res.data});
       });
@@ -51,7 +56,7 @@ var ReadingNew = React.createClass({
     }
     return (
       <div>
-        <h1>{this.props.params.id}</h1>
+        <h1>{this.state.utility == undefined ? null : this.state.utility.name}</h1>
         <ReadingList readings={this.state.readings}/>
         {chart}
         <ReadingForm utilityId={this.props.params.id} />

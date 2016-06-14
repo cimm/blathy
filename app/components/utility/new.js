@@ -10,10 +10,6 @@ var UtilityNew = React.createClass({
     };
   },
 
-  componentDidMount: function() {
-    this.store = new Store(DATASET);
-  },
-
   handleName: function(e) {
     var currentUtility = this.state.currentUtility;
     currentUtility['name'] = e.target.value;
@@ -22,7 +18,7 @@ var UtilityNew = React.createClass({
 
   handleSubmit: function(e) {
     e.preventDefault();
-    this.store.create(this.state.currentUtility);
+    new Store(DATASET).create(this.state.currentUtility);
     this.setState({currentUtility: {}});
   },
 

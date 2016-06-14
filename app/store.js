@@ -20,6 +20,10 @@ class Store {
     }
   }
 
+  get(id) {
+    return this.collection.get(id);
+  }
+
   list(params) {
     return this.collection.list(params);
   }
