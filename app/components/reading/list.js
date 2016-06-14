@@ -8,11 +8,12 @@ var ReadingList = React.createClass({
   render: function() {
     var readings = this.props.readings.map((reading, i) =>
       <tr key={i}>
-        <td>{reading.utilityId} - {reading.readAt.toString()} - {reading.volume}</td>
+        <td>{reading.readAt.toString()}</td>
+        <td>{reading.volume}</td>
       </tr>
     );
     return (
-      <table>
+      <table className='u-full-width'>
         <tbody>
           {readings}
         </tbody>

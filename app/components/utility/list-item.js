@@ -10,8 +10,8 @@ var UtilityListItem = React.createClass({
 
   render: function() {
     return (
-      <div>
-        <Link to={`/utilities/${this.props.id}/readings/new`}>{this.props.name}</Link>
+      <div className='row'>
+        <Link className='twelve columns button' to={`/utilities/${this.props.id}/readings/new`}>{this.props.name}</Link>
       </div>
     )
   }

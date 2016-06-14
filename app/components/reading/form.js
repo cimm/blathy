@@ -41,13 +41,15 @@ var ReadingForm = React.createClass({
   render: function() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <div>
-          <input type='number' onChange={this.handleVolume} required/>
+        <div className='row'>
+          <input className='twelve columns' type='number' onChange={this.handleVolume} required/>
         </div>
-        <div>
-          <input type='date' onChange={this.handleReadAt} required/>
+        <div className='row'>
+          <input className='twelve columns' type='date' onChange={this.handleReadAt} required/>
         </div>
-        <button onClick={this.handleSubmit} type='submit'>Save</button>
+        <div className='row'>
+          <input type='submit' value='Submit'/>
+        </div>
       </form>
     )
   }

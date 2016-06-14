@@ -4,6 +4,7 @@ var Victory = require('victory');
 var VictoryChart = Victory.VictoryChart;
 var VictoryLine = Victory.VictoryLine;
 var VictoryScatter = Victory.VictoryScatter;
+var Header = require('../header.js');
 var ReadingList = require('./list.js');
 var ReadingForm = require('./form.js');
 
@@ -55,11 +56,11 @@ var ReadingNew = React.createClass({
       ];
     }
     return (
-      <div>
-        <h1>{this.state.utility == undefined ? null : this.state.utility.name}</h1>
-        <ReadingList readings={this.state.readings}/>
-        {chart}
+      <div className='container'>
+        <Header header={this.state.utility == undefined ? null : this.state.utility.name}/>
         <ReadingForm utilityId={this.props.params.id} />
+        {chart}
+        <ReadingList readings={this.state.readings}/>
       </div>
     )
   }
