@@ -1,6 +1,5 @@
 var React = require('react');
 var Store = require('../../store.js');
-var Header = require('../header.js');
 
 const DATASET = 'utilities';
 
@@ -26,7 +25,6 @@ var UtilityNew = React.createClass({
   render: function() {
     return (
       <div>
-        <Header header='Utility' />
         <form onSubmit={this.handleSubmit}>
           <div className='row'>
             <input className='twelve columns' type='text' onChange={this.handleName} required/>

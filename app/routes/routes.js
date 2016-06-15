@@ -9,9 +9,10 @@ var UtilityNew = require('../components/utility/new');
 
 var routes = (
   <Router history={hashHistory}>
-    <Route path='/' component={Main}/>
-    <Route path='/utilities/new' component={UtilityNew}/>
-    <Route path='/utilities/:id/readings/new' component={ReadingNew}/>
+    <Route path='/' component={Main}>
+      <Route path='/utilities/new' component={UtilityNew}/>
+      <Route path='/utilities/:id/readings/new' component={ReadingNew}/>
+    </Route>
   </Router>
 );
 
