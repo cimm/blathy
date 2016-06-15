@@ -7,7 +7,7 @@ var Main = React.createClass({
   render: function() {
     return (
       <div className='container'>
-        <h1>Header</h1>
+        <h1>Blathy</h1>
         {this.props.children || <Home/>}
       </div>
     )
