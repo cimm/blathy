@@ -1,0 +1,13 @@
+{
+  "short_name": "Blathy",
+  "name": "Blathy",
+  "icons": [{
+    "src": "favicon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "start_url": "localhost:9000",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

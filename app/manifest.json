@@ -1,9 +1,0 @@
-{
-  "short_name": "Blathy",
-  "name": "Blathy",
-  "display": "standalone",
-  "icons": [],
-  "start_url": "/index.html",
-  "display": "standalone",
-  "orientation": "portrait"
-}

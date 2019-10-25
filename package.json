@@ -1,37 +1,24 @@
 {
-  "name": "Blathy",
-  "version": "0.0.1",
-  "main": "index.js",
-  "scripts": {
-    "start": "webpack-dev-server",
-    "production": "webpack -p"
-  },
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "react": "^15.1.0",
-    "react-dom": "^15.1.0",
-    "react-router": "^2.4.1",
-    "kinto": "^1.2.2",
-    "victory": "^0.8.0"
-  },
+  "name": "blathy",
+  "version": "0.0.2",
   "devDependencies": {
-    "babel-core": "^6.7.6",
-    "babel-loader": "^6.2.4",
-    "babel-preset-react": "^6.5.0",
-    "html-webpack-plugin": "^2.15.0",
-    "webpack": "^1.12.15",
-    "webpack-dev-server": "^1.14.1",
-    "css-loader": "^0.23.1",
-    "copy-webpack-plugin": "^3.0.1"
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.1",
+    "echarts": "^4.4.0",
+    "mini-css-extract-plugin": "^0.6.0",
+    "serve": "^11.0.0",
+    "style-loader": "^0.23.1",
+    "svelte": "^3.0.0",
+    "svelte-loader": "2.13.3",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cimm/blathy.git"
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack",
+    "dev": "webpack-dev-server --content-base public"
   },
-  "bugs": {
-    "url": "https://github.com/cimm/blathy/issues"
-  },
-  "homepage": "https://github.com/cimm/blathy#readme",
-  "description": ""
+  "dependencies": {
+    "svelte-spa-router": "^1.2.1"
+  }
 }
