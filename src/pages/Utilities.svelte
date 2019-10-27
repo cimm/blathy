@@ -15,7 +15,7 @@
 </script>
 
 <form on:submit|preventDefault={addUtility}>
-  <input bind:value={newUtility.name} type='text' minlength=3 maxlength=20 required/>
+  <input bind:value={newUtility.name} type='text' minlength='3' maxlength='20' required/>
   <button type='submit'>Add</button>
   or
   <a href='#/'>cancel</a>

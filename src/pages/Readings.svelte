@@ -22,8 +22,8 @@
 </script>
 
 <form on:submit|preventDefault={addReading}>
-  <input bind:value={newReading.value} type='number' min='1' required/>
-  <input bind:value={newReading.date} max={today} type='date' required/>
+  <input bind:value={newReading.value} type='number' min='1' step='0.01' required/>
+  <input bind:value={newReading.date} type='date' max={today} required/>
   <button type='submit'>Add</button>
   or
   <a href='#/'>cancel</a>
