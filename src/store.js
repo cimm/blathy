@@ -1,7 +1,5 @@
 import { writable } from 'svelte/store'
 
-export const readings = writable([])
-
 function createUtilities() {
   const key = 'utilities'
   const storedUtilities = JSON.parse(localStorage.getItem(key))
@@ -16,4 +14,19 @@ function createUtilities() {
   }
 }
 
+function createReadings() {
+  const key = 'readings'
+  const storedReadings = JSON.parse(localStorage.getItem(key))
+  const { subscribe, set, update } = writable(storedReadings || [])
+
+  return {
+    subscribe,
+    set: (readings) => {
+      localStorage.setItem(key, JSON.stringify(readings))
+      set(readings)
+    }
+  }
+}
+
 export const utilities = createUtilities()
+export const readings = createReadings()
