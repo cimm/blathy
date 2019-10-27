@@ -1,5 +1,6 @@
 <script>
   import { utilities } from '../store.js'
+  import Export from '../components/Export.svelte'
 </script>
 
 <h1>Bláthy</h1>
@@ -14,3 +15,5 @@
 		</li>
 	{/each}
 </ul>
+
+<Export/>
