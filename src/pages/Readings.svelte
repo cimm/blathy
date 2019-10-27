@@ -5,7 +5,7 @@
 
   export let params
 
-  $:utilityReadings = $readings.filter(r => r.utilityId === params.utilityId)
+  $: utilityReadings = $readings.filter(r => r.utilityId === params.utilityId)
   $: readingValues = utilityReadings.map(r => r.value)
   $: readingDates = utilityReadings.map(r => r.date)
 

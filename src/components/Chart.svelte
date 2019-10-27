@@ -16,10 +16,9 @@
   }
 
   let rootElement
-  let chart 
 
   $: if (rootElement) {
-    chart = echarts.init(rootElement)
+    const chart = echarts.init(rootElement)
     chart.setOption(opts)
   }
 </script>

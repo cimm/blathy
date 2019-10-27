@@ -2,7 +2,7 @@
   import { utilities } from '../store.js'
   import { push } from 'svelte-spa-router'
 
-  let newUtility = { id: randomID() }
+  const newUtility = { id: randomID() }
 
   function addUtility(event) {
     utilities.set([...$utilities, newUtility].sort(byName))
