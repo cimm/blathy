@@ -1,10 +1,11 @@
 <script>
   import { readings } from '../store.js'
+  import { push } from 'svelte-spa-router'
   import Chart from '../components/Chart.svelte'
 
   export let params
 
-  $:utilityReadings = $readings.filter(r => r.utilityId === params.utilityId).sort(byDate)
+  $:utilityReadings = $readings.filter(r => r.utilityId === params.utilityId)
   $: readingValues = utilityReadings.map(r => r.value)
   $: readingDates = utilityReadings.map(r => r.date)
 
@@ -12,7 +13,7 @@
   let newReading = { utilityId: params.utilityId, date: today }
 
   function addReading(event) {
-    readings.set([...$readings, newReading])
+    readings.set([...$readings, newReading].sort(byDate))
     newReading = { utilityId: params.utilityId, date: today }
   }
 

@@ -5,12 +5,16 @@
   let newUtility = { id: randomID() }
 
   function addUtility(event) {
-    utilities.set([...$utilities, newUtility])
+    utilities.set([...$utilities, newUtility].sort(byName))
     push('/')
   }
 
   function randomID() {
     return Math.random().toString(32).slice(2)
+  }
+
+  function byName(a, b) {
+    return a.name.localeCompare(b.name)
   }
 </script>
 
