@@ -4,7 +4,7 @@
 
   const newUtility = { id: randomID() }
 
-  function addUtility(event) {
+  function addUtility(evt) {
     utilities.set([...$utilities, newUtility].sort(byName))
     push('/')
   }
@@ -19,7 +19,7 @@
 </script>
 
 <form on:submit|preventDefault={addUtility}>
-  <input bind:value={newUtility.name} type='text' minlength='3' maxlength='20' required/>
+  <input type='text' minlength='3' maxlength='20' required bind:value={newUtility.name} />
   <button type='submit'>Add</button>
   or
   <a href='#/'>cancel</a>

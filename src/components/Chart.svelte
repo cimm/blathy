@@ -30,4 +30,4 @@
   }
 </style>
 
-<div bind:this={rootElement} class='chart'/>
+<div class='chart' bind:this={rootElement} />

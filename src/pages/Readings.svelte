@@ -12,7 +12,7 @@
   const today = new Date().toISOString().slice(0, 10)
   let newReading = { utilityId: params.utilityId, date: today }
 
-  function addReading(event) {
+  function addReading(evt) {
     readings.set([...$readings, newReading].sort(byDate))
     newReading = { utilityId: params.utilityId, date: today }
   }
@@ -23,8 +23,8 @@
 </script>
 
 <form on:submit|preventDefault={addReading}>
-  <input bind:value={newReading.value} type='number' min='1' step='0.01' required/>
-  <input bind:value={newReading.date} type='date' max={today} required/>
+  <input type='number' min='1' step='0.01' required bind:value={newReading.value} />
+  <input type='date' max={today} required bind:value={newReading.date} />
   <button type='submit'>Add</button>
   or
   <a href='#/'>cancel</a>
