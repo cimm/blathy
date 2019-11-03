@@ -9,14 +9,18 @@
     const reader = new FileReader()
     reader.onload = (e) => {
       const contents = JSON.parse(e.target.result)
-      utilities.set(contents['utilities'].sort(byDate))
+      utilities.set(contents['utilities'].sort(byName))
       readings.set(contents['readings'].sort(byDate))
     }
     reader.readAsText(file)
   }
 
+  function byName(a, b) {
+    return a.name > b.name
+  }
+
   function byDate(a, b) {
-    return a.date > b.date
+    return a.readAt > b.readAt
   }
 </script>
 
