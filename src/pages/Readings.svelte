@@ -1,33 +1,32 @@
 <script>
-  import { readings } from '../store.js'
+  import ReadingsChart from '../components/ReadingsChart.svelte'
   import { push } from 'svelte-spa-router'
-  import Chart from '../components/Chart.svelte'
+  import { readings } from '../store.js'
+  import Reading from '../reading.js'
 
   export let params
 
-  $: utilityReadings = $readings.filter(r => r.utilityId === params.utilityId)
-  $: readingValues = utilityReadings.map(r => r.value)
-  $: readingDates = utilityReadings.map(r => r.date)
-
   const today = new Date().toISOString().slice(0, 10)
-  let newReading = { utilityId: params.utilityId, date: today }
+  let newReading = new Reading(params.utilityId)
 
   function addReading(evt) {
-    readings.set([...$readings, newReading].sort(byDate))
-    newReading = { utilityId: params.utilityId, date: today }
+    readings.set([...$readings, newReading].sort(byReadAt))
+    newReading = new Reading(params.utilityId)
   }
 
-  function byDate(a, b) {
-    return a.date > b.date
+  function byReadAt(a, b) {
+    return a.readAt > b.readAt
   }
+
+  $: utilityReadings = $readings.filter(r => r.utilityId === params.utilityId)
 </script>
 
 <form on:submit|preventDefault={addReading}>
   <input type='number' min='1' step='0.01' required bind:value={newReading.value} />
-  <input type='date' max={today} required bind:value={newReading.date} />
+  <input type='date' max={today} required bind:value={newReading.readAtAsString} />
   <button type='submit'>Add</button>
   or
   <a href='#/'>cancel</a>
 </form>
 
-<Chart data={readingValues} labels={readingDates}/>
+<ReadingsChart readings={utilityReadings}/>

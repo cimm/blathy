@@ -3,6 +3,14 @@
 
   let files = []
 
+  // JSON has no date type, we need to desrialize manually
+  function dateParser(key, val) {
+    if (typeof val === 'string' && dateFormat.test(val)) {
+      return new Date(val)
+    }
+    return val
+  }
+
   function importFile(evt) {
     const file = files[0]
 
@@ -10,16 +18,16 @@
     reader.onload = (e) => {
       const contents = JSON.parse(e.target.result)
       utilities.set(contents['utilities'].sort(byName))
-      readings.set(contents['readings'].sort(byDate))
+      readings.set(contents['readings'].sort(byReadAt))
     }
     reader.readAsText(file)
   }
 
   function byName(a, b) {
-    return a.name > b.name
+    return a.name.localeCompare(b.name)
   }
 
-  function byDate(a, b) {
+  function byReadAt(a, b) {
     return a.readAt > b.readAt
   }
 </script>
