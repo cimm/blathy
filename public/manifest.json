@@ -1,12 +1,12 @@
 {
-  "short_name": "Blathy",
-  "name": "Blathy",
+  "short_name": "Bláthy",
+  "name": "Bláthy",
   "icons": [{
     "src": "favicon.png",
     "sizes": "512x512",
     "type": "image/png"
   }],
-  //"start_url": "/",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
