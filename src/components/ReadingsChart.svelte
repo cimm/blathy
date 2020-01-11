@@ -31,20 +31,34 @@
     xAxis: [
       {
         type: 'time',
-        axisLabel: { formatter: (v, i) => new Date(v).toLocaleDateString('en-GB') }
+        axisLabel: {
+          color: 'white',
+          formatter: (v, i) => new Date(v).toLocaleDateString('en-GB')
+        },
+        splitLine: {
+          show: false
+        }
       }
     ],
     yAxis: [
-      { type: 'value' }
+      { type: 'value',
+        axisLabel: {
+          color: 'white'
+        },
+        splitLine: {
+          show: false
+        }
+      }
     ],
     series: [
       { type: 'line',
         step: 'middle',
         data: resampledReadings,
+        color: '#ff6e6c',
         symbol: 'none',
         markArea: {
           data: winterAreas(),
-          itemStyle: { color: "#ddd", opacity: 0.5 }
+          itemStyle: { color: '#c9bae2', opacity: 0.2 }
         }
       }
     ],
@@ -64,7 +78,7 @@
 <style>
   .chart {
     width: 100%;
-    height: 300px;
+    min-height: 300px;
   }
 </style>
 

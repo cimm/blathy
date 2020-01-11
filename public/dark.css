@@ -1,0 +1,22 @@
+html {
+  --background-color: #301e4e;
+  --link-color: #ff6e6c;
+  --headline-color: white;
+  --paragraph-color: #c9bae2;
+  --card-paragraph-color: #cabae2;
+  --card-background-color: #463366;
+  --highlight-color: #fbdd74;
+
+  background-color: var(--background-color);
+  font-family: ubuntu, sans-serif;
+  line-height: 1.8;
+}
+
+header {
+  color: var(--highlight-color);
+  margin: 0 .2rem .5rem .2rem;
+}
+
+header h1 {
+  margin: 0;
+}

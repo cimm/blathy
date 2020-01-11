@@ -3941,6 +3941,11 @@ svelte-dev-helper@^1.1.9:
   resolved "https://registry.yarnpkg.com/svelte-dev-helper/-/svelte-dev-helper-1.1.9.tgz#7d187db5c6cdbbd64d75a32f91b8998bde3273c3"
   integrity sha1-fRh9tcbNu9ZNdaMvkbiZi94yc8M=
 
+svelte-feather-icons@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/svelte-feather-icons/-/svelte-feather-icons-3.0.0.tgz#b44fe74fbb32b47a788bf2fc727a93048b1aefdb"
+  integrity sha512-Nbkzn3y3CnS0qZ4LjlrnCVmmCt3sa271kl1v8Bq6qmish+PJxIWz4WhLwAj2Kx+leYlzVlxKsCwjg2u7Jdvc/Q==
+
 svelte-loader@2.13.0:
   version "2.13.6"
   resolved "https://registry.yarnpkg.com/svelte-loader/-/svelte-loader-2.13.6.tgz#3d5efd5886c2bab034606d5af0cce659da3ee555"

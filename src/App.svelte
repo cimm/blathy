@@ -1,13 +1,17 @@
 <script>
-  import Router from 'svelte-spa-router'
   import Home from './pages/Home.svelte'
-  import Utilities from './pages/Utilities.svelte'
-  import Readings from './pages/Readings.svelte'
+  import Import from './pages/Import.svelte'
+  import NewUtility from './pages/NewUtility.svelte'
+  import NotFound from './pages/NotFound.svelte'
+  import Reading from './pages/Reading.svelte'
+  import Router from 'svelte-spa-router'
 
   const routes = {
     '/': Home,
-    '/utilities': Utilities,
-    '/readings/:utilityId': Readings
+    '/import': Import,
+    '/utilities': NewUtility,
+    '/readings/:utilityId': Reading,
+    '*': NotFound
   }
 </script>
 
