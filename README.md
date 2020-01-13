@@ -8,6 +8,19 @@ The application is named after [Ottó Titusz Bláthy](http://en.wikipedia.org/wi
 
 Bláthy is a single HTML file with a single JavaScript bundle (and soon some CSS). There is no need for a server, simply open the HTML page in a browser.
 
+## Development
+
+Clone the git repository, install the Node packages and run the webpack-dev-server.
+
+```
+$ git clone https://github.com/cimm/blathy.git
+$ cd blathy
+$ yarn install
+$ yarn run dev
+```
+
+Run `yarn run build` to generate the production JS and CSS bundles.
+
 ## License
 
 Bláthy is licensed under the [MIT license](LICENSE), ideas and contributions welcome.
