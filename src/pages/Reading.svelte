@@ -68,7 +68,7 @@
 </header>
 
 <form on:submit|preventDefault={addReading}>
-  <input type='number' placeholder={lastReading()} min='1' step='0.01' required bind:value={newReading.value} />
+  <input type='number' placeholder={lastReading()} inputmode='decimal' min='1' step='0.01' required bind:value={newReading.value} />
   <input type='date' max={today} required bind:value={newReading.readAtAsString} />
   <button type='submit'>
     <PlusSquareIcon/>
