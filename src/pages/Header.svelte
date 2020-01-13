@@ -1,6 +1,7 @@
 <script>
   import Export from '../components/Export.svelte'
-  import { UploadIcon, PlusSquareIcon } from 'svelte-feather-icons'
+  import Import from '../components/Import.svelte'
+  import { PlusSquareIcon } from 'svelte-feather-icons'
 </script>
 
 <style>
@@ -27,14 +28,9 @@
 
 <header>
   <h1>Bláthy</h1>
-
   <a href='#/utilities' title='Add new utility'>
     <PlusSquareIcon/>
   </a>
-
-  <a href='#/import' title='Import from file'>
-    <UploadIcon/>
-  </a>
-
+  <Import/>
   <Export/>
 </header>

@@ -45,9 +45,7 @@
 		<li>
       <a href='#/readings/{utility.id}'>
         <h2>{utility.name}</h2>
-        {#if lastReading(utility)}
-          <SingleReading reading={lastReading(utility)}/>
-        {/if}
+        <SingleReading reading={lastReading(utility)}/>
       </a>
 		</li>
 	{/each}

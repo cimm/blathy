@@ -58,7 +58,7 @@
 </header>
 
 <form on:submit|preventDefault={addUtility}>
-  <input type='text' minlength='3' maxlength='20' placeholder='Utility name' required autofocus bind:value={newUtility.name} />
+  <input type='text' minlength='3' maxlength='20' placeholder='Utility name' required bind:value={newUtility.name} />
   <button type='submit'>
     <PlusSquareIcon/>
   </button>
