@@ -39,6 +39,9 @@
     height: 2rem;
     width: 2rem;
   }
+  a:hover {
+    color: var(--link-color);
+  }
   form {
     column-gap: .5rem;
     display: grid;
@@ -57,6 +60,9 @@
     padding: 0;
     vertical-align: bottom;
     width: 2rem;
+  }
+  button:hover {
+    color: var(--link-color);
   }
 </style>
 

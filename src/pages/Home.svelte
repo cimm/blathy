@@ -30,7 +30,7 @@
     text-decoration: none;
   }
   a:hover {
-    filter: brightness(1.2);
+    color: var(--link-color);
   }
   h2 {
     color: var(--headline-color);

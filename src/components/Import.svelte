@@ -49,7 +49,7 @@
   }
   label:hover {
     cursor: pointer;
-    filter: brightness(5);
+    color: var(--link-color);
   }
 </style>
 

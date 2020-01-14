@@ -12,7 +12,7 @@
     width: 2em;
   }
   a:hover {
-    filter: brightness(5);
+    color: var(--link-color);
   }
 </style>
 
