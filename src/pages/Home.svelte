@@ -1,6 +1,7 @@
 <script>
   import Header from '../pages/Header.svelte'
   import SingleReading from '../components/SingleReading.svelte'
+  import Welcome from '../pages/Welcome.svelte'
   import { utilities, readings } from '../store.js'
 
   function lastReading(utility) {
@@ -40,13 +41,17 @@
 
 <Header/>
 
-<ul>
-	{#each $utilities as utility}
-		<li>
-      <a href='#/readings/{utility.id}'>
-        <h2>{utility.name}</h2>
-        <SingleReading reading={lastReading(utility)}/>
-      </a>
-		</li>
-	{/each}
-</ul>
+{#if $utilities.length == 0}
+  <Welcome/>
+{:else}
+  <ul>
+    {#each $utilities as utility}
+      <li>
+        <a href='#/readings/{utility.id}'>
+          <h2>{utility.name}</h2>
+          <SingleReading reading={lastReading(utility)}/>
+        </a>
+      </li>
+    {/each}
+  </ul>
+{/if}
