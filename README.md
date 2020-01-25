@@ -1,6 +1,8 @@
 # Bláthy
 
-A single-page offline-first responsive web application (a fancy way of saying it’s a website behaving as a mobile app) to monitor energy usage at one’s home. Each month or so I use Bláthy to record my electricity, gas, water, petrol and solar meters for which it generates nice graphs. The application runs fully offline, client-side and no data is stored outside of your device. This is great for privacy but means you need regular backups since there are no copies of the collected data.
+A single-page offline-first responsive web application (a fancy way of saying it’s a website behaving as a mobile app) to monitor energy consumption at one’s home.
+
+Each month or so I use Bláthy to record my electricity, gas, water, petrol and solar meters with my phone for which it generates nice graphs. The application runs fully offline, client-side and no data is stored outside of your device. This is great for privacy but means you need regular backups since there are no copies of the collected data.
 
 To use Blàthy simply go to https://www.suffix.be/blathy and click the plus icon to add your first utility to track. The data is stored in your browser’s local storage so don’t forget to take backups (click the download icon)!
 
