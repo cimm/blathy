@@ -1,5 +1,7 @@
 <script>
-  import moment from 'moment'
+  import dayjs from 'dayjs'
+  import relativeTime from 'dayjs/plugin/relativeTime'
+  dayjs.extend(relativeTime)
 
   export let reading
 </script>
@@ -24,6 +26,6 @@
 {#if reading}
   <div>
     <span class='value'>{reading.value}</span>
-    <time datetime={reading.readAt.toISOString()}>{moment(reading.readAt).fromNow()}</time>
+    <time datetime={reading.readAt.toISOString()}>{dayjs(reading.readAt).fromNow()}</time>
   </div>
 {/if}
