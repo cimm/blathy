@@ -1,7 +1,7 @@
 <script>
-  import Header from '../pages/Header.svelte'
+  import Header from '../containers/Header.svelte'
   import SingleReading from '../components/SingleReading.svelte'
-  import Welcome from '../pages/Welcome.svelte'
+  import Welcome from '../containers/Welcome.svelte'
   import { utilities, readings } from '../store.js'
 
   function lastReading(utility) {

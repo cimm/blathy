@@ -1,8 +1,8 @@
 <script>
-  import Home from './pages/Home.svelte'
-  import NewUtility from './pages/NewUtility.svelte'
-  import NotFound from './pages/NotFound.svelte'
-  import Reading from './pages/Reading.svelte'
+  import Home from './containers/Home.svelte'
+  import NewUtility from './containers/NewUtility.svelte'
+  import NotFound from './containers/NotFound.svelte'
+  import Reading from './containers/Reading.svelte'
   import Router from 'svelte-spa-router'
 
   const routes = {
