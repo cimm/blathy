@@ -4,6 +4,10 @@ export default class Reading {
     this.readAt = new Date()
   }
 
+  set valueAsString(val) {
+    this.value = parseFloat(val)
+  }
+
   // workaround for https://github.com/sveltejs/svelte/issues/3399
   get readAtAsString() {
     return this.readAt.toISOString().slice(0, 10) // format string as 2019-12-01

@@ -1,11 +1,13 @@
 <script>
-  import { ArrowLeftIcon, PlusSquareIcon } from 'svelte-feather-icons'
+  import Input from '../containers/Input.svelte'
+  import { ArrowLeftIcon } from 'svelte-feather-icons'
   import { pop } from 'svelte-spa-router'
   import { utilities } from '../store.js'
 
   const newUtility = { id: randomID() }
 
   function addUtility(evt) {
+    newUtility['name'] = evt.detail.inputValue
     utilities.set([...$utilities, newUtility].sort(byName))
     pop()
   }
@@ -34,26 +36,6 @@
   a:hover {
     color: var(--link-color);
   }
-  form {
-    text-align: center;
-  }
-  input {
-    height: 2rem;
-  }
-  button {
-    background-color: transparent;
-    border-width: 0;
-    color: var(--highlight-color);
-    cursor: pointer;
-    height: 2rem;
-    margin-left: .5rem;
-    padding: 0;
-    vertical-align: bottom;
-    width: 2rem;
-  }
-  button:hover {
-    color: var(--link-color);
-  }
 </style>
 
 <header>
@@ -63,9 +45,6 @@
   <h1>New Utility</h1>
 </header>
 
-<form on:submit|preventDefault={addUtility}>
-  <input type='text' minlength='3' maxlength='20' placeholder='Utility name' required bind:value={newUtility.name} />
-  <button type='submit'>
-    <PlusSquareIcon/>
-  </button>
-</form>
+<footer>
+  <Input type='text' placeholder='New utility name' on:submit={addUtility}/>
+</footer>
