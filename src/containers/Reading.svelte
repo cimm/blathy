@@ -1,13 +1,12 @@
 <script>
+  import Chart from '../components/Chart.svelte'
   import Input from '../containers/Input.svelte'
   import Reading from '../reading.js'
-  import ReadingsChart from '../components/ReadingsChart.svelte'
   import { ArrowLeftIcon, PlusSquareIcon } from 'svelte-feather-icons'
   import { utilities, readings } from '../store.js'
 
   export let params
 
-  const today = new Date().toISOString().slice(0, 10)
   let newReading = new Reading(params.utilityId)
 
   function addReading(evt) {
@@ -55,7 +54,7 @@
 </header>
 
 {#if utilityReadings}
-  <ReadingsChart readings={utilityReadings}/>
+  <Chart readings={utilityReadings}/>
 {/if}
 
 <footer>
