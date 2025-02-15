@@ -7,7 +7,7 @@ A single-page offline-first responsive web application (a fancy way of saying it
 
 Each month or so I use Bláthy to record my electricity, gas, water, petrol and solar meters with my phone for which it generates nice graphs. The application runs fully offline, client-side and no data is stored outside of your device. This is great for privacy but means you need regular backups since there are no copies of the collected data.
 
-To use Blàthy simply go to https://www.suffix.be/blathy and click the plus icon to add your first utility to track. The data is stored in your browser’s local storage so don’t forget to take backups (click the download icon)!
+To use Blàthy click the plus icon to add your first utility to track. The data is stored in your browser’s local storage so don’t forget to take backups (click the download icon)!
 
 The application is named after [Ottó Titusz Bláthy](http://en.wikipedia.org/wiki/Otto_Blathy), the Hungarian co-inventor of the wattmeter.
 
@@ -23,8 +23,6 @@ $ yarn run dev
 ```
 
 Run `yarn run build` to generate the production JS and CSS bundles. Together with the other files in the [public](public) folder you have everything needed to run your own Blàthy.
-
-Ideas and contributions welcome via [GitHub issues](https://github.com/cimm/blathy/issues)!
 
 ## History
 
