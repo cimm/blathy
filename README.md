@@ -1,3 +1,6 @@
+> [!WARNING]
+> This repository has been archived and is no longer actively maintained. Bugs and vulnerabilities are no longer fixed, so do not run this code without first verifying it and updating its dependencies yourself!
+
 # Bláthy
 
 A single-page offline-first responsive web application (a fancy way of saying it’s a website behaving as a mobile app) to monitor energy consumption at one’s home.
